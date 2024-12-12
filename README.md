@@ -24,9 +24,9 @@ You can follow this youtube [video](https://www.youtube.com/watch?v=u8E3-Zy9NvI&
      resize2fs /dev/mapper/pve-root
      ```
   3. Go to Datecenter &rarr; Storage &rarr; select on `local` &rarr; press `edit` &rarr; Content &rarr; Selelct all options &rarr; press `OK`.
-### Downloading Ubuntu-22 Lxc:      
-  `Local` &rarr; CT Templates &rarr; press on `Templates` &rarr; search `ubuntu 22` &rarr; select `ubuntu-22` press `download` (Wait for download to finish`TASK OK` than exit).        
-  - Why Lxc(Linux Containers over OS):
-    Lxc is preferred over a full Linux server OS because it is more lightweight and resource-efficient. Unlike a full OS, Lxc containers share the host’s kernel, leading to faster performance, quicker start-up times, and lower overhead. This makes Lxc ideal for running multiple isolated applications on the same machine, offering better scalability and portability without the resource demands of a full OS.        
+### Downloading Lxc (Linux Containers):      
+  `Local` &rarr; CT Templates &rarr; press on `Templates` &rarr; search `ubuntu-22 or debian12` &rarr; select `ubuntu-22 / debian-12` press `download` (Wait for download to finish`TASK OK` than exit).        
+  - Why Lxc over OS:
+    Lxc is preferred over a full Linux server OS because it is more lightweight and resource-efficient. Unlike a full OS, Lxc containers share the host’s (Proxmox) kernel, leading to faster performance, quicker start-up times, and lower overhead. This makes Lxc ideal for running multiple isolated applications on the same machine, offering better scalability and portability without the resource demands of a full OS.        
 
 
