@@ -2,8 +2,8 @@
 
 This is my repository to record the steps i take to setup my homelab for learning and practicing new technologies.
 
-## Hardware
-I am using the Shuttle DS81D for my homelab because of its compact size, reliability, and solid performance. Equipped with an Intel Core i3/i5 processor and supporting up to 16GB of RAM, it offers an ideal balance of power and energy efficiency for running a Docker and Kubernetes cluster. Its small form factor allows me to maintain a tidy setup while efficiently managing containerized applications and orchestrating workloads. The robust connectivity options and expandability further enhance its versatility, making it a great choice for hosting various services and experimenting with containerization and microservices in my home network.         
+## Hardware (Shuttle DS81D)
+I am using the refurbished Shuttle DS81D which i buyed from local market (Sadar Karachi) for my homelab because of its compact size, reliability, and solid performance. Equipped with an Intel Core i5 4th Gen (Intel(R) Core(TM) i5-4590T CPU @ 2.00GHz) processor with 16GB of RAM, it offers an ideal balance of power and energy efficiency for running a services like Docker and Kubernetes cluster. Its small form factor allows me to maintain a tidy setup while efficiently managing containerized applications and orchestrating workloads. The robust connectivity options and expandability further enhance its versatility, making it a great choice for hosting various services and experimenting with containerization and microservices in my home network.         
 ![00](00.png) 
 <br>
 ## OS (Proxmox VE)
