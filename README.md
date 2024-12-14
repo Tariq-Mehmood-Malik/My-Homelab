@@ -8,7 +8,7 @@ I am using the refurbished Shuttle DS81D which i buyed from local market (Sadar 
   <img src="00.jpg" alt="Hardware Node" />
 </p>
 
-<br>
+<br>   
 
 ## OS (Proxmox VE)
 Proxmox Virtual Environment is an open-source server virtualization management platform. It is a Debian-based Linux distribution with a modified Ubuntu LTS kernel which specialises in managing virtual machines and containers.
@@ -22,21 +22,28 @@ In order to install proxmox 1st download latest version of [Proxmox Virtual Envi
 You can follow this youtube [video](https://www.youtube.com/watch?v=u8E3-Zy9NvI&list=PLT98CRl2KxKHnlbYhtABg6cF50bYa8Ulo&index=3) to install proxmox on any system.    
 
 ## Setting Up Proxmox
-### 1st setup bridge network VLAN awairness.    
+### 1. VLAN awairness.    
   Your-Hostname &rarr; Network &rarr; double click on `Linux Bridge` &rarr; check box `Vlan Aware`.
-### Setting up storage setting to ulitize all storage (by removing `local-lvm`):
+### 2. Setting up storage setting to ulitize all storage (by removing `local-lvm`):
   1. Go to Datecenter &rarr; Storage &rarr; select on `local-lvm` &rarr; press `remove`&rarr; Yes.
-  2. Hostname &rarr; Shell &rarr; Enter follwing commands 1 by 1.
+
+  2. Hostname &rarr; Shell &rarr; Enter follwing commands.
      ```bash
      lvremove /dev/pve/data -y
+     ```
+     ```bash
      lvresize -l +100%FREE /dev/pve/root
+     ```
+     ```bash
      resize2fs /dev/mapper/pve-root
      ```
+  
   3. Go to Datecenter &rarr; Storage &rarr; select on `local` &rarr; press `edit` &rarr; Content &rarr; Selelct all options &rarr; press `OK`.
-### Downloading Lxc (Linux Containers):      
-  `Local(storage)` &rarr; CT Templates &rarr; press on `Templates` &rarr; search `ubuntu-22 or debian12` &rarr; select `ubuntu-22 / debian-12` press `download` (Wait for download to finish`TASK OK` than exit).        
-  - Why Lxc over OS:
-    Lxc is preferred over a full Linux server OS because it is more lightweight and resource-efficient. Unlike a full OS, Lxc containers share the host’s (Proxmox) kernel, leading to faster performance, quicker start-up times, and lower overhead. This makes Lxc ideal for running multiple isolated applications on the same machine, offering better scalability and portability without the resource demands of a full OS.        
-     <br><br><br><br>
+### 3. Downloading Lxc (Linux Containers):      
+  `Local(storage)` &rarr; CT Templates &rarr; press on `Templates` &rarr; search `ubuntu-22 or debian12` &rarr; select `ubuntu-22 / debian-12` press `download` (Wait for download to finish`TASK OK` than exit).                                   
+
+  ### Why Lxc over OS:
+  Lxc is preferred over a full Linux server OS because it is more lightweight and resource-efficient. Unlike a full OS, Lxc containers share the host’s (Proxmox) kernel, leading to faster performance, quicker start-up times, and lower overhead. This makes Lxc ideal for running multiple isolated applications on the same machine, offering better scalability and portability without the resource demands of a full OS.        
+  
 
 [My Homelab Network](#my-homelab-network) 
