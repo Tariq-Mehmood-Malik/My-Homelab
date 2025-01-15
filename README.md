@@ -18,16 +18,16 @@
   ### Why Proxmox
   Proxmox stands out from other hypervisors because it combines both virtual machines (VMs) and containers in one platform, offering flexibility. It's open-source and free to use, with a user-friendly web interface for easy management. It also has powerful features like high availability, backup, and easy clustering, which makes it great for both small and large setups.     
   ### Installing Proxmox 
-  In order to install proxmox 1st download latest version of [Proxmox Virtual Enviroment ISO Installer](https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso).        
+  In order to install proxmox download latest version of [Proxmox Virtual Enviroment ISO Installer](https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso).        
   You can follow this youtube [video](https://www.youtube.com/watch?v=u8E3-Zy9NvI&list=PLT98CRl2KxKHnlbYhtABg6cF50bYa8Ulo&index=3) to install proxmox on any system.    
 
 ## After Installaing Proxmox
 
-  Open your main system, other than of proxmox, which will be on LAN as proxmox server. Open browser and enter `https://<proxmox-server-ip>:8006`, in user enter `root` and in password enter you set up at time of installing proxmox.
+  Open your main system, other than of proxmox, which will be on Ssame LAN as proxmox server. Open browser and enter `https://<proxmox-server-ip>:8006`, in user enter `root` and in password enter password you set up at time of installing proxmox.
   
   In Proxmox, each individual server is referred to as a `node`. A `Proxmox Cluster` is formed by combining multiple nodes to work together.
   
-  ### 1. VLAN awairness.    
+  ### 1. Enable VLAN Awairness.    
     Your-Node &rarr; Network &rarr; double click on `Linux Bridge` &rarr; check box `Vlan Aware`.     
     
   ### 2. Setting up storage setting to ulitize all storage (by removing `local-lvm`):
@@ -47,15 +47,14 @@
   ```
     
   3. Go to Datecenter &rarr; Storage &rarr; select on `local` &rarr; press `edit` &rarr; Content &rarr; Selelct all options &rarr; press `OK`.
+                               
+---
+
+## Things I Have Learned:
+
+  ### LXC (Linux Conatiner)
+  I have used LXC (Ubuntu-22) for practice `Docker`, it works perfectly for basic Docker works like running containers, building images, creating networks, adding volumes & composing ifrastructure but it doesn't work for orchestration like `Docker Swarm` if you are runing Docker swarm or Kubernetes you have to use VM instead of LXC.
+
+  ### VMs
+  I have used VM (Ubuntu-Server-24 LTS) for Docker Swarm (orchestration), as LXC doesn't work properly for orchestration, and also use it for Kubernetes Cluster Node.
   
-  ### 3. Downloading Lxc (Linux Containers):      
-  `Local(storage)` &rarr; CT Templates &rarr; press on `Templates` &rarr; search `ubuntu-22 or debian12` &rarr; select `ubuntu-22 / debian-12` press `download` (Wait for download to finish`TASK OK` than exit).                                   
-
-
-## Setting up insfrastructure
-
-  ### Installing LXC 
-  Lxc is preferred over a full Linux server OS because it is more lightweight and resource-efficient. Unlike a full OS, Lxc containers share the host’s (Proxmox) kernel, leading to faster performance, quicker start-up times, and lower overhead. This makes Lxc ideal for running multiple isolated applications on the same machine, offering better scalability and portability without the resource demands of a full OS.        
-  
-
-[My Homelab Network](#my-homelab-network) 
