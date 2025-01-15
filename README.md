@@ -27,11 +27,12 @@
   
   In Proxmox, each individual server is referred to as a `node`. A `Proxmox Cluster` is formed by combining multiple nodes to work together.
   
-  ### 1. Enable VLAN Awairness.    
-    Your-Node &rarr; Network &rarr; double click on `Linux Bridge` &rarr; check box `Vlan Aware`.     
+  ### 1. Enable VLAN Awairness.   
+  
+  Your-Node &rarr; Network &rarr; double click on `Linux Bridge` &rarr; check box `Vlan Aware`.     
     
   ### 2. Setting up storage setting to ulitize all storage (by removing `local-lvm`):
-  1. Go to Datecenter &rarr; Storage &rarr; select on `local-lvm` &rarr; press `remove`&rarr; Yes.
+  1. Go to Datacenter &rarr; Storage &rarr; select on `local-lvm` &rarr; press `remove`&rarr; Yes.
   
   2. Your-node &rarr; Shell &rarr; Enter follwing commands.
   ```bash
