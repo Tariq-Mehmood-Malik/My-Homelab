@@ -58,4 +58,6 @@
 
   ### VMs
   I have used VM (Ubuntu-Server-24 LTS) for Docker Swarm (orchestration), as LXC doesn't work properly for orchestration, and also use it for Kubernetes Cluster Node.
+
+  Noted
   
