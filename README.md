@@ -54,10 +54,10 @@
 ## Things I Have Learned:
 
   ### LXC (Linux Conatiner)
-  I have used LXC (Ubuntu-22) for practice `Docker`, it works perfectly for basic Docker works like running containers, building images, creating networks, adding volumes & composing ifrastructure but it doesn't work for orchestration like `Docker Swarm` if you are runing Docker swarm or Kubernetes you have to use VM instead of LXC.
+  I have used LXC (Ubuntu-22) to practice `Docker`, it works perfectly for basic Docker works like running containers, building images, creating networks, adding volumes & composing ifrastructure but it doesn't work for orchestration like `Docker Swarm` if you are runing Docker swarm or Kubernetes you have to use VM instead of LXC.
 
   ### VMs
-  I have used VM (Ubuntu-Server-24 LTS) for Docker Swarm (orchestration), as LXC doesn't work properly for orchestration, and also use it for Kubernetes Cluster Node.
+  I have used VM (Ubuntu-Server-24 LTS) for Docker Swarm (orchestration) and also use it as Kubernetes Cluster Node.
 
   Noted
   
